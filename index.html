@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,21 +7,39 @@
         <title>Alarm app</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <script src="https://kit.fontawesome.com/1b3df8e3dc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <label for="hour">Hour</label>
-        <input name="hour" id="hour" type="number" value="00">
-        <label for="minutes">Minutes</label>
-        <input name="minutes" id="minutes" type="number" value="00">
-        <button id="button">Launch alarm</button>
-        <div id="show_alarm"></div>
         
+        <div id="clock">
+            <div id="current-time" class="time">
+                <div class="hours">00</div>
+                <div class="colons">:</div>
+                <div class="minutes">00</div>
+            </div>
+            <div id="alarm-container">
+                <div id="up" class="buttons">
+                    <div class="hours"><i class="fa-solid fa-angle-up"></i></div>
+                    <div class="minutes"><i class="fa-solid fa-angle-up"></i></div>
+                </div>
+                <div id="alarm" class="time">
+                    <div class="hours">0</div>
+                    <div class="colons">:</div>
+                    <div class="minutes">00</div>
+                </div>
+                <div id="down" class="buttons">
+                    <div class="hours"><i class="fa-solid fa-angle-down"></i></div>
+                    <div class="minutes"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <h2>Set alarm</h2>
+                <div id="toggle-button"></div>
+            </div>
+        </div>
+
         <audio id="audio" src="beep.mp3"></audio>
-        <script src="script.js" async defer></script>
+        <script src="display_time.js"></script>
+        <script src="alarm.js"></script>
     </body>
 </html>

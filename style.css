@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Digital Dismay'; 
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/digital-dismay.regular.otf') format("opentype");
+}
+
+html, body {
+    min-height: 100%;
+    font-family: 'Digital dismay', 'Orbitron', monospace;
+    background-color: rgb(7, 7, 55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time::before {
+    content:'00:00';
+    opacity:.1;
+    position: absolute
+}
+
+.time {
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 0;
+    width: 5ch;
+    padding:  .05em .2em;
+    background-color: black;
+    border: .09em solid rgb(58, 58, 58);
+    color: orange;
+    border-radius: .2em;
+
+}
+
+.time div {
+    opacity: .9s;
+    position:relative;
+}
+
+
+
+#clock {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2ch;
+    background-color: black;
+    border: 1em solid gray;
+    padding: 7ch;
+    border-radius: 3rem;
+}
+
+
+#current-time {
+    font-size: 10rem;
+}
+
+#alarm-container {
+    font-size : 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem
+}
+
+h2 {
+    font-family: 'Orbitron', monospace;
+    color: white;
+    font-size: 1rem;
+}
+
+.buttons {
+    align-self: stretch;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    font-size: .2em;
+    color: white;
+    
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 10rem;
+    overflow: hidden
+}
+
+.buttons div{
+    text-align: center;
+    background: black;
+}
+
+.buttons .hours {
+    border-right: .05em solid rgb(58, 58, 58);
+}
+
+.buttons .minutes {
+    
+    border-left: .05em solid rgb(58, 58, 58);
+}
+
+#toggle-button {
+    border-radius : 100%;
+    background: gray;
+    width: 1ch;
+    height: 1ch
+}
+
+#toggle-button.pushed {
+    background: red;
+}
