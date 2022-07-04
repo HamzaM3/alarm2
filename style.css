@@ -44,8 +44,7 @@ html, body {
 
 
 #clock {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
     gap: 2ch;
     background-color: black;
@@ -64,7 +63,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 1rem
+    gap: 1rem;
 }
 
 h2 {
@@ -74,7 +73,8 @@ h2 {
 }
 
 .buttons {
-    align-self: stretch;
+    
+    width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,7 +84,8 @@ h2 {
     
     border: 1px solid rgb(58, 58, 58);
     border-radius: 10rem;
-    overflow: hidden
+    overflow: hidden;
+
 }
 
 .buttons div{
@@ -111,3 +112,18 @@ h2 {
 #toggle-button.pushed {
     background: red;
 }
+
+@media screen and (max-width : 900px) {
+    html, body {
+        font-size : 75%;
+    }
+    #clock {
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    html, body {
+        font-size : 50%;
+    }

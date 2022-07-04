@@ -1,3 +1,6 @@
+
+// Left as an artifact (to remember from where I come)
+
 const button = document.getElementById('button');
 const alarm = document.getElementById('show_alarm');
 const audio_element = document.getElementById('audio');
